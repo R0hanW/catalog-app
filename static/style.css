@@ -1,0 +1,65 @@
+* {
+  font-family: "Helvetica Neue Bold", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+ul{
+  list-style-type: none;
+}
+
+a{
+  text-decoration:none;
+}
+
+
+.header{
+  margin-bottom: 0;
+  line-height: 16px;
+  color: #7B7573;
+  font-weight: 400;
+  display: inline-block;
+}
+
+#title{
+  float: left;
+  height: 50px;
+  margin-top: 0px;
+  width: auto;
+  text-transform: uppercase;
+  font-family: Verdana !important;
+  text-align: center;
+}
+
+#loginButton{
+  float: right;
+  position:absolute;
+  right:5;
+}
+
+
+.container{
+  display: inline-block;
+}
+
+.category{
+  float:left;
+  width:auto;
+  height:auto;
+  text-align:left;
+  position:absolute;
+  left:40%
+}
+
+.items{
+  float:right;
+  width:auto;
+  height:auto;
+  position:absolute;
+  left:50%
+}
+
+#itemDescription{
+  margin: auto;
+  width:50%;
+  text-align:center;
+}

@@ -1,0 +1,19 @@
+<html>
+<head>
+  <link rel = "stylesheet" type = "text/css" href = "{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+  {%include "header.html"%}
+  <h1>Create a new menu item </h1>
+
+  <form action = "{{url_for('newItem', categoryName = category)}}" method = "post">
+    Name: <input type = 'text' size = '30' name = 'name' required>
+    <br>
+    Description: <input type = 'text' size = '30' name = 'description'>
+    <br>
+    Category: <input type = 'text' size = '30' name = 'category' value = '{{category}}' required>
+    <br>
+    <input type = 'submit' value = 'Create'>
+  </form>
+</body>
+</html>

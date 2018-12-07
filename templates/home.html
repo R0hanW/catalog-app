@@ -1,0 +1,29 @@
+<html>
+<head>
+  <link rel = "stylesheet" type = "text/css" href = "{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+  {%include "header.html"%}
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+
+  <ul>
+  {% for message in messages %}
+    <li><strong>{{message}}</strong></li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% endwith %}
+  <div class = "container">
+    {%include "categories.html"%}
+    <div class = "items">
+      <h2>Latest Items</h2>
+      <ul>
+        {%for item in latestItems%}
+          <a href = "{{url_for('showItem', itemName  = item.name, category = item.category.name)}}"><li><strong>{{item.name}}</strong>  ({{item.category.name}})</li></a>
+        {%endfor%}
+      </ul>
+    </div>
+
+</body>
+</html>

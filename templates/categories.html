@@ -1,0 +1,8 @@
+<div class = "category">
+  <h2>Categories</h2>
+  <ul id = "categoryList">
+    {% for category in categories %}
+      <a href = "{{url_for('showCategory', categoryName = category.name)}}">  <li> <strong> {{category.name}} </strong> </li></a>
+    {%endfor%}
+  </ul>
+</div>
